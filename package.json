@@ -1,0 +1,29 @@
+{
+  "name": "brainrotcsstest",
+  "version": "1.0.0",
+  "description": "I was bored so i made whatever the fuck this is.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matwin04/BrainrotCSSTest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matwin04/BrainrotCSSTest/issues"
+  },
+  "homepage": "https://github.com/matwin04/BrainrotCSSTest#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.1",
+    "postgres": "^3.4.5"
+  }
+}

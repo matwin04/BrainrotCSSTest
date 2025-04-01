@@ -1,0 +1,25 @@
+html {
+    background-color: black;
+    color: aqua;
+}
+h1 {
+    color: deeppink;
+    text-align: center;
+}
+h2 {
+    color: #f014ff;
+    font-family: "Comic Sans MS";
+    text-align: center;
+}
+.supriseLink {
+    color: aqua;
+    text-decoration: none;
+}
+.investorPfp {
+    width: 50px;
+    height: 100px;
+}
+.investment {
+    font-family: SansSerif, serif;
+    border: 2px solid red;
+}
