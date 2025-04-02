@@ -28,6 +28,9 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
     res.render("index", { title: "PINGAS" });
 });
+app.get("/brainrotinvestements", (req, res) => {
+    res.render("brainrotinvestements");
+})
 app.get("/nutshack", (req, res) => {
     res.render("nutshack");
     console.log("SOMEONE IS IN THE NUTSHACK");
