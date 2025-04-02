@@ -22,7 +22,31 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 
 // ✅ Ensure the POIs table exists
 // ✅ Ensure the Users & POIs Table Exist
-
+async function setupDB() {
+    try {
+        await sql`
+            CREATE TABLE IF NOT EXISTS users (
+                id SERIAL PRIMARY KEY,
+                username VARCHAR(50) UNIQUE NOT NULL,
+                email VARCHAR(100) UNIQUE NOT NULL,
+                password_hash TEXT NOT NULL,
+                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )`;
+        
+        await sql`
+            CREATE TABLE IF NOT EXISTS logbook (
+                id SERIAL PRIMARY KEY,
+                user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+                name TEXT NOT NULL,
+                description TEXT
+            )`;
+        
+        console.log("✅ Users & POIs tables ready");
+    } catch (err) {
+        console.error("❌ Database setup failed:", err);
+    }
+}
+setupDB();
 
 // HOME ROUTE
 app.get("/", (req, res) => {
