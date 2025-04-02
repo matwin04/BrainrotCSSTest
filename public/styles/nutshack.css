@@ -1,3 +1,15 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: black;
+    color: white;
+    font-family: fantasy;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
 #bg-video {
     position: fixed;
     top: 0;
@@ -8,39 +20,45 @@
     filter: grayscale(100%) blur(10px);
     z-index: -1;
 }
-.grid-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vh;
-    padding: 20px;
-}
-.video-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-body {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    justify-items: center;
-    align-items: center;
-    min-height: 100vh;
+
+#nutshack-header {
+    height: 8vh;
+    line-height: 8vh;
+    text-align: center;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.75);
+    border-bottom: 2px solid white;
+    z-index: 1;
     position: relative;
-    z-index: 0;
 }
 
-/* Bottom text */
-#nutshack-text {
-    grid-column: 1 / -1;
-    text-align: center;
-    font-size: 5rem;
-    font-weight: bold;
-    color: white;
-    text-shadow: 0 0 10px black;
-    margin-top: 20px;
-    z-index: 1;
+#nutshack-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Scale the table to 100% of available height and width */
+table {
+    width: 100vw;
+    height: 92vh; /* 100vh - header */
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+td {
+    padding: 0;
+}
+
+/* Scale videos to perfectly fit each cell */
+td video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 4 / 3;
+    border: 2px solid white;
+    box-sizing: border-box;
 }
