@@ -39,6 +39,9 @@ app.get("/osaka", (req, res) => {
     console.log("SATA ANDAGIII");
     res.render("osaka");
 });
+app.get("/granddad", (req, res) => {
+    res.render("granddad");
+})
 if (!process.env.VERCEL && !process.env.NOW_REGION) {
     const PORT = process.env.PORT || 3002;
     app.listen(PORT, () => {
