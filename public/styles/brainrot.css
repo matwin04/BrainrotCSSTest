@@ -10,16 +10,22 @@ h2 {
     color: #f014ff;
     font-family: "Comic Sans MS";
     text-align: center;
+    text-shadow: 2px 2px 5px red;
 }
 .supriseLink {
     color: aqua;
     text-decoration: none;
 }
 .investorPfp {
-    width: 50px;
+    width: 100px;
     height: 100px;
+    float: right;
 }
 .investment {
     font-family: SansSerif, serif;
     border: 2px solid red;
+}
+.image2 {
+    width: 150px;
+    height: 100px;
 }

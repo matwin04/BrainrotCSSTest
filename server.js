@@ -30,8 +30,10 @@ app.get("/", (req, res) => {
 });
 app.get("/nutshack", (req, res) => {
     res.render("nutshack");
-})
-
+});
+app.get("/osaka", (req, res) => {
+    res.render("osaka");
+});
 if (!process.env.VERCEL && !process.env.NOW_REGION) {
     const PORT = process.env.PORT || 3002;
     app.listen(PORT, () => {
