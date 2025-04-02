@@ -30,8 +30,10 @@ app.get("/", (req, res) => {
 });
 app.get("/nutshack", (req, res) => {
     res.render("nutshack");
+    console.log("SOMEONE IS IN THE NUTSHACK");
 });
 app.get("/osaka", (req, res) => {
+    console.log("SATA ANDAGIII");
     res.render("osaka");
 });
 if (!process.env.VERCEL && !process.env.NOW_REGION) {
